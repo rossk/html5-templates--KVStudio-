@@ -1,0 +1,198 @@
+/* Iframe styles */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.container {
+    margin: 10px auto;
+    padding-bottom: 40px;
+}
+
+.btn-link, .btn-link:hover, btn-link:focus, .btn-link:active {
+    color: #000;
+    text-decoration: none;
+}
+
+a#menuClick, a#menuClick:hover, a#menuClick:focus, a#menuClick:active {
+    text-decoration: none;
+}
+
+.footnotes {
+    padding: 10px 15px !important;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+#zoom {
+    text-align: right;
+}
+
+form p {
+    margin-bottom: 0;
+}
+
+form label input[type="range"] {
+    vertical-align: middle;
+}
+
+#tabletMenuDropdown {
+    margin-top: 9px;
+    padding-right: 0;
+}
+
+.menuHolder {
+    text-align: right;
+}
+
+.menuButton {
+    text-decoration: none;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    background-image: url('../img/navicon.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.combo-player-wrapper {
+    border: 1px solid #e3e3e3;
+    background: #555;
+    border-radius: 0;
+    box-shadow: 0 0 60px 20px rgba(0,0,0,0.5) inset;
+    margin: 10px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.playerWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.playerDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.well {
+    padding: 0;
+    margin-left: 0px;
+}
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs {
+    text-align:center;
+}
+
+.chapter-navigator-item-selected a {
+    color: #fff;
+}
+
+.chapter-navigator-item-selected a:hover {
+    color: #428bca;
+}
+
+#title_bar {
+    display: inline;
+}
+
+.accordToggle {
+    vertical-align: top;
+}
+
+#phoneTabs {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tab-pane {
+    padding-top: 10px;
+}
+
+.tagLine {
+    margin-top: 10px;
+    background: #eee;
+}
+
+.tagLine p {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+
+    #tabletMenuDropdown {
+        display: none !important;
+    }
+
+    .combo-player-row {
+        margin-right: 0;
+        margin-left: 0;
+        overflow: hidden;
+    }
+
+    .phone-presentation-title {
+        overflow: hidden;
+    }
+
+    #phoneTabs.nav > li > a {
+        padding: 10px 8px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    #phoneMenuDropdown {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #tabletMenuDropdown, #phoneMenuDropdown {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #title_bar {
+        font-size: 125%;
+        margin-bottom: 10px;
+    }
+}
+
+/* iPhone */
+@media only screen and (width:320px) and (device-width:320px) and (device-height:480px) and (orientation: landscape) {
+
+    body {
+        -webkit-transform: scale(0.667);
+        -webkit-transform-origin: top right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 480px;
+    }
+
+}
