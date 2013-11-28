@@ -1,0 +1,136 @@
+
+
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.css">
+<link rel="stylesheet" href="css/basicPlaylist.css">
+
+<div allow-edit="style.background-color" class="template-wrapper" id="body">
+
+<div class="container">
+
+    <!-- Header for All Modes -->
+
+    <div class="row"  allow-edit="style.display" id="logo">
+
+        <div class="col-xs-9 col-sm-6 col-md-8 col-lg-8">
+
+            <a href="http://www.knowledgevision.com" target="_blank" id="logoLink" allow-edit="href"><img src="img/kv-logo.png" class="img-responsive" id="logoImage" allow-edit="src" /></a>
+
+        </div>
+
+        <div id="zoom" class="col-sm-5 col-md-4 col-lg-4 hidden-xs">
+
+            <form class="form-inline">
+
+                <p allow-edit="style.display" id="brand">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
+
+                <label>Zoom <zoom-control></zoom-control></label>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- End Header -->
+
+
+    <!-- Combo Player -->
+
+    <div class="row combo-player-row">
+
+        <div id="comboPlayer" allow-edit='style.border-width' class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left combo-player-wrapper">
+
+            <div class="playerWrapper">
+
+                <div class="playerDiv">
+
+                    <combo-player></combo-player>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End Combo Player -->
+
+
+    <!-- Presentation Subtitle -->
+
+    <div class="row subtitle-wrapper">
+
+        <h4 allow-edit='text' id="subtitle"></h4>
+
+    </div>
+
+    <!-- End Presentation Subtitle -->
+
+
+    <!-- Social and brand -->
+
+    <div class="social-brand-wrapper row">
+
+        <div class="col-xs-6 col-sm-8 col-md-9 col-lg-9">
+
+            <div style="display: none;" id='social' allow-edit="style.display">
+
+                <a target="_blank" href="http://facebook.com/" id="facebook" allow-edit="href"><img src="img/fb.png" alt="facebook" /></a>
+                <a target="_blank" href="http://twitter.com/" id="twitter" allow-edit="href"><img src="img/tw.png" alt="twitter" /></a>
+                <a target="_blank" href="/rss" id="rss" allow-edit="href"><img src="img/rss.png" alt="rss" /></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End social and brand -->
+
+
+    <!-- Chapters, Attachments & Footnotes -->
+    <div class="row bottom-wrapper">
+
+        <!-- Chapters -->
+
+        <div class="col-sm-4">
+
+            <h3>Chapters</h3>
+
+            <chapter-navigator class="nav nav-list well"></chapter-navigator>
+
+        </div>
+
+        <!-- Footnotes -->
+
+        <div class="col-sm-4">
+
+            <h3>Footnotes</h3>
+
+            <footnotes class="nav nav-list well"></footnotes>
+
+        </div>
+
+        <!-- Attachments -->
+
+        <div class="col-sm-4">
+
+            <h3>Attachments</h3>
+
+            <attachments class="nav nav-list well"></attachments>
+
+        </div>
+
+    </div>
+    <!-- End Chapters, Attachments & Footnotes -->
+
+
+
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+
+</div>

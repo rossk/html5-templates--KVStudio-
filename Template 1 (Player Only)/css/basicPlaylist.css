@@ -18,7 +18,8 @@ html.kvapp body,
 html.kvapp body > div,
 html.kvapp body > div > div,
 html.kvapp .template-wrapper {
-    height: 100%;
+    height: auto;
+    min-height: 100%;
 }
 
 #playerFrame {
