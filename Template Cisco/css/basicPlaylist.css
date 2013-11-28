@@ -139,7 +139,7 @@ html.kvapp .template-wrapper {
 .mobi-menu-wrapper {
     position: absolute;
     top: 50%;
-    right: 20px;
+    left: 120px;
     margin-top: -20px;
 }
 
@@ -147,14 +147,6 @@ html.kvapp .template-wrapper {
     left: auto;
     right: 0px;
 }
-
-#phoneMenuButton {
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*right: 10px;*/
-    /*margin-top: -20px;*/
-}
-
 
 
 
@@ -214,4 +206,34 @@ html.kvapp .template-wrapper {
     position: absolute;
     bottom: 5px;
     right: 10px;
+}
+
+
+/* Transcript-specific classes */
+
+.transcript {
+    clear: both;
+    padding: 10px 15px !important;
+    max-height: 500px;
+    overflow: auto;
+}
+
+
+.transcriptToggle {
+    background: #eee;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.transcript-search  {
+    margin-top: 20px;
+}
+
+.transcript-search .dropdown-menu {
+    min-width: 300px;
 }

@@ -5,15 +5,15 @@
 <link rel="stylesheet" href="css/bootstrap-glyphicons.css">
 <link rel="stylesheet" href="css/basicPlaylist.css">
 
-<div allow-edit="style.background-color" class="template-wrapper" id="body">
+<div allow-edit="style.background-color" class="template-wrapper" id="body(color)">
 
 <div class="container">
 
     <!-- Header for All Modes -->
 
-    <div class="row header-wrapper"  allow-edit="style.display" id="logo">
+    <div class="row header-wrapper"  allow-edit="style.display" id="logo(displaying)">
 
-        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
+        <div class="col-xs-10 col-sm-10 col-md-8 col-lg-8">
 
             <a href="http://www.knowledgevision.com" target="_blank" id="logoLink" allow-edit="href"><img src="img/cisco.png" class="img-responsive" id="logoImage" allow-edit="src" /></a>
 
@@ -49,7 +49,7 @@
         <!-- End Phone Menu Icon -->
 
 
-        <div id="zoom" class="col-sm-2 col-md-4 col-lg-4 hidden-xs">
+        <div id="zoom" class="col-xs-2 col-sm-2 col-md-4 col-lg-4">
 
             <form class="form-inline">
 
@@ -68,13 +68,13 @@
 
     <div class="row combo-player-row">
 
-        <div id="comboPlayer" allow-edit='style.border-width' class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left combo-player-wrapper">
+        <div id="playerFrame" allow-edit='style.border-width' class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left combo-player-wrapper">
 
             <div class="playerWrapper">
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player player-chrome="fixed"></combo-player>
 
                 </div>
 
@@ -93,11 +93,11 @@
 
         <div class="col-xs-6 col-sm-8 col-md-9 col-lg-9">
 
-            <div style="display: none;" id='social' allow-edit="style.display">
+            <div style="display: none;" id='social(displaying)' allow-edit="style.display">
 
-                <a target="_blank" href="http://facebook.com/" id="facebook" allow-edit="href"><img src="img/fb.png" alt="facebook" /></a>
-                <a target="_blank" href="http://twitter.com/" id="twitter" allow-edit="href"><img src="img/tw.png" alt="twitter" /></a>
-                <a target="_blank" href="/rss" id="rss" allow-edit="href"><img src="img/rss.png" alt="rss" /></a>
+                <a target="_blank" href="http://facebook.com/" id="facebook(source)" allow-edit="href"><img src="img/fb.png" alt="facebook" /></a>
+                <a target="_blank" href="http://twitter.com/" id="twitter(source)" allow-edit="href"><img src="img/tw.png" alt="twitter" /></a>
+                <a target="_blank" href="/rss" id="rss(source)" allow-edit="href"><img src="img/rss.png" alt="rss" /></a>
 
             </div>
 
@@ -114,7 +114,7 @@
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
-            <h2>Chapters</h2>
+            <h3>Chapters</h3>
 
             <chapter-navigator class="nav nav-list well"></chapter-navigator>
 
@@ -123,9 +123,11 @@
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
-            <h2>Transcript</h2>
+            <h3 class="pull-left">Transcript</h3>
 
-            <transcript class="well"></transcript>
+            <transcript-search class="pull-right"></transcript-search>
+
+            <transcript class="nav nav-list well"></transcript>
 
         </div>
 
@@ -137,7 +139,7 @@
 
     <div class="row footer-wrapper">
 
-        <p allow-edit="style.display" id="brand" class="brand col-xs-6 col-sm-4 col-md-3 col-lg-3 tabs-right">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
+        <p allow-edit="style.display" id="brand(displaying)" class="brand col-xs-6 col-sm-4 col-md-3 col-lg-3 tabs-right">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
 
     </div>
 
