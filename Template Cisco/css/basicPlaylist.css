@@ -149,6 +149,13 @@ html.kvapp .template-wrapper {
 }
 
 
+form label input[type="range"] {
+    vertical-align: middle;
+}
+
+#zoom label {
+    color: #fff;
+}
 
 @media (max-width: 767px) {
 
