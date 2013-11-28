@@ -1,0 +1,217 @@
+/* Iframe styles */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+}
+
+html.kvapp,
+html.kvapp body,
+html.kvapp body > div,
+html.kvapp body > div > div,
+html.kvapp .template-wrapper {
+    height: auto;
+    min-height: 100%;
+}
+
+#playerFrame {
+    border: 0px solid #333;
+}
+
+.social-wrapper {
+    display: none;
+}
+
+.container {
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.btn-link, .btn-link:hover, btn-link:focus, .btn-link:active {
+    color: #000;
+    text-decoration: none;
+}
+
+.combo-player-wrapper {
+    border: 1px solid #e3e3e3;
+    background: #555;
+    border-radius: 0;
+    box-shadow: 0 0 60px 20px rgba(0,0,0,0.5) inset;
+    margin: 10px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.playerWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.playerDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.social-brand-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.social-brand-wrapper>* {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.brand {
+    text-align: right;
+}
+
+.header-wrapper {
+    height: 75px;
+    background: #4c7fb3;
+    background: -moz-linear-gradient(top,  #4c7fb3 0%, #2a5498 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c7fb3), color-stop(100%,#2a5498));
+    background: -webkit-linear-gradient(top,  #4c7fb3 0%,#2a5498 100%);
+    background: -o-linear-gradient(top,  #4c7fb3 0%,#2a5498 100%);
+    background: -ms-linear-gradient(top,  #4c7fb3 0%,#2a5498 100%);
+    background: linear-gradient(to bottom,  #4c7fb3 0%,#2a5498 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c7fb3', endColorstr='#2a5498',GradientType=0 );
+}
+
+.footer-wrapper {
+    position: relative;
+
+    height: 75px;
+    background: #2a5498;
+    background: -moz-linear-gradient(top,  #2a5498 0%, #4c7fb3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2a5498), color-stop(100%,#4c7fb3));
+    background: -webkit-linear-gradient(top,  #2a5498 0%,#4c7fb3 100%);
+    background: -o-linear-gradient(top,  #2a5498 0%,#4c7fb3 100%);
+    background: -ms-linear-gradient(top,  #2a5498 0%,#4c7fb3 100%);
+    background: linear-gradient(to bottom,  #2a5498 0%,#4c7fb3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a5498', endColorstr='#4c7fb3',GradientType=0 );
+}
+
+.footer-wrapper p {
+    color: #ffffff;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+}
+
+.footer-wrapper a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-menu {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    margin-top: -6px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.header-menu li {
+    list-style: none;
+    float: left;
+    margin-right: 15px;
+}
+
+.header-menu li a {
+    color: #ffffff;
+}
+
+.mobi-menu-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -20px;
+}
+
+.mobi-menu-wrapper .dropdown-menu {
+    left: auto;
+    right: 0px;
+}
+
+#phoneMenuButton {
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*right: 10px;*/
+    /*margin-top: -20px;*/
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    .social-brand-wrapper {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .combo-player-row {
+        margin-right: 0;
+        margin-left: 0;
+        overflow: hidden;
+    }
+
+}
+
+
+/* iPhone */
+@media only screen and (width:320px) and (device-width:320px) and (device-height:480px) and (orientation: landscape) {
+
+    body {
+        -webkit-transform: scale(0.667);
+        -webkit-transform-origin: top right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 480px;
+    }
+
+}
+
+
+
+.menuHolder {
+    text-align: right;
+}
+
+
+.menuButton {
+    text-decoration: none;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    background-image: url('../img/navicon.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#zoom {
+    text-align: right;
+    height: 100%;
+}
+
+#zoom form {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
