@@ -78,6 +78,10 @@ html.kvapp .template-wrapper {
     text-align: right;
 }
 
+.attachment-wrapper {
+    margin-top: 10px;
+}
+
 #subtitle {
     font-weight: bold;
 }
@@ -102,7 +106,8 @@ form label input[type="range"] {
         overflow: hidden;
     }
 
-    .subtitle-wrapper{
+    .subtitle-wrapper,
+    .attachment-wrapper {
         margin-left: 0;
         margin-right: 0;
     }
@@ -128,34 +133,4 @@ form label input[type="range"] {
         width: 480px;
     }
 
-}
-
-
-/* Transcript-specific classes */
-
-.transcript {
-    clear: both;
-    padding: 10px 15px !important;
-    max-height: 500px;
-    overflow: auto;
-}
-
-
-.transcriptToggle {
-    background: #eee;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.transcript-search  {
-    margin-top: 20px;
-}
-
-.transcript-search .dropdown-menu {
-    min-width: 300px;
 }

@@ -78,10 +78,6 @@ html.kvapp .template-wrapper {
     text-align: right;
 }
 
-.attachment-wrapper {
-    margin-top: 10px;
-}
-
 #subtitle {
     font-weight: bold;
 }
@@ -106,8 +102,7 @@ form label input[type="range"] {
         overflow: hidden;
     }
 
-    .subtitle-wrapper,
-    .attachment-wrapper {
+    .subtitle-wrapper{
         margin-left: 0;
         margin-right: 0;
     }
