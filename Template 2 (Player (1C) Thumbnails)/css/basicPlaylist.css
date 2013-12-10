@@ -77,6 +77,20 @@ html.kvapp .template-wrapper {
     text-align: right;
 }
 
+#zoom {
+    text-align: right;
+    padding-top: 10px;
+}
+
+form p {
+    margin-bottom: 0;
+}
+
+form label input[type="range"] {
+    vertical-align: middle;
+}
+
+
 @media (max-width: 767px) {
 
     .social-brand-wrapper {
