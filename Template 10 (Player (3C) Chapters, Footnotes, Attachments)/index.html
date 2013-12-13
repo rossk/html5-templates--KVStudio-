@@ -19,7 +19,7 @@
 
         </div>
 
-        <div id="zoom" class="col-sm-5 col-md-4 col-lg-4 hidden-xs">
+        <div id="zoom" class="col-sm-6 col-md-4 col-lg-4 hidden-xs">
 
             <form class="form-inline">
 
@@ -31,9 +31,44 @@
 
         </div>
 
+        <!-- Phone Menu Icon -->
+
+        <div class="col-xs-3 visible-xs menuHolder">
+
+            <button id="phoneMenuButton" type="button" class="btn btn-primary menuButton"></button>
+
+        </div>
+
+        <!-- End Phone Menu Icon -->
+
     </div>
 
     <!-- End Header -->
+
+
+    <!-- Phone Chapter Listing -->
+
+    <div class="row visible-xs">
+
+        <div id="phoneMenuDropdown" class="col-xs-12 menuDropdown hide pull-right">
+
+            <div id="phoneMenuTabContent" class="tab-content visible-xs">
+
+                <div class="col-xs-12">
+
+                    <h4 id='Chapters-mobile' allow-edit='text'>Chapters</h4>
+
+                    <chapter-navigator class="nav nav-list well"></chapter-navigator>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End Phone Chapter Listing -->
 
 
     <!-- Combo Player -->
@@ -46,7 +81,7 @@
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
@@ -59,15 +94,23 @@
     <!-- End Combo Player -->
 
 
-    <!-- Presentation Subtitle -->
+    <!-- Presentation Title -->
 
-    <div class="row subtitle-wrapper">
+    <div class="row">
 
-        <h4 allow-edit='text' id="subtitle"></h4>
+        <div class="col-sm-12">
+
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+            <presentation-description/>
+
+        </div>
 
     </div>
 
-    <!-- End Presentation Subtitle -->
+    <!-- End Presentation Title -->
 
 
     <!-- Social and brand -->
@@ -96,9 +139,9 @@
 
         <!-- Chapters -->
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 hidden-xs">
 
-            <h3>Chapters</h3>
+            <h3 id='Chapters' allow-edit='text' class="component-title">Chapters</h3>
 
             <chapter-navigator class="nav nav-list well"></chapter-navigator>
 
@@ -108,7 +151,7 @@
 
         <div class="col-sm-4">
 
-            <h3>Footnotes</h3>
+            <h3 id='Footnotes' allow-edit='text' class="component-title">Footnotes</h3>
 
             <footnotes class="nav nav-list well"></footnotes>
 
@@ -118,7 +161,7 @@
 
         <div class="col-sm-4">
 
-            <h3>Attachments</h3>
+            <h3 id='Attachments' allow-edit='text' class="component-title">Attachments</h3>
 
             <attachments class="nav nav-list well"></attachments>
 
@@ -134,3 +177,13 @@
 <script src="js/bootstrap.min.js"></script>
 
 </div>
+
+<script>
+    $(".menuButton").click(function() {
+        if($("#phoneMenuDropdown").hasClass("hide")) {
+            $("#phoneMenuDropdown").removeClass("hide").addClass("show");
+        } else {
+            $("#phoneMenuDropdown").removeClass("show").addClass("hide");
+        }
+    })
+</script>

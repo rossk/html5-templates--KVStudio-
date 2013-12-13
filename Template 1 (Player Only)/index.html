@@ -19,9 +19,11 @@
 
         </div>
 
-        <div id="zoom" class="col-sm-5 col-md-4 col-lg-4 hidden-xs">
+        <div id="zoom" class="col-sm-6 col-md-4 col-lg-4 hidden-xs">
 
             <form class="form-inline">
+
+                <p allow-edit="style.display" id="brand">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
 
                 <label>Zoom <zoom-control></zoom-control></label>
 
@@ -44,7 +46,7 @@
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
@@ -72,8 +74,6 @@
             </div>
 
         </div>
-
-        <p allow-edit="style.display" id="brand" class="brand col-xs-6 col-sm-4 col-md-3 col-lg-3 tabs-right">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
 
     </div>
 

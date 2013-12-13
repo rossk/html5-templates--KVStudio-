@@ -23,6 +23,8 @@
 
             <form class="form-inline">
 
+                <p allow-edit="style.display" id="brand">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
+
                 <label>Zoom <zoom-control></zoom-control></label>
 
             </form>
@@ -44,7 +46,7 @@
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
@@ -55,6 +57,25 @@
     </div>
 
     <!-- End Combo Player -->
+
+
+    <!-- Presentation Title -->
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+            <presentation-description/>
+
+        </div>
+
+    </div>
+
+    <!-- End Presentation Title -->
 
 
     <!-- Social and brand -->
@@ -73,16 +94,26 @@
 
         </div>
 
-        <p allow-edit="style.display" id="brand" class="brand col-xs-6 col-sm-4 col-md-3 col-lg-3 tabs-right">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
-
     </div>
 
     <!-- End social and brand -->
 
 
-    <!-- Tablet Playlist/Chapter Listing -->
-    <thumbnail-navigator></thumbnail-navigator>
+    <!-- Thumbnails -->
 
+    <div class="row navigator-wrapper">
+
+        <div class="col-sm-12">
+
+            <h3 id='Thumbnails' allow-edit='text' class="component-title">Thumbnails</h3>
+
+            <thumbnail-navigator class="nav nav-list well"></thumbnail-navigator>
+
+        </div>
+
+    </div>
+
+    <!-- End Thumbnails -->
 
 
 

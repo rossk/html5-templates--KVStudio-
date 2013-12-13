@@ -5,11 +5,13 @@
 <link rel="stylesheet" href="css/bootstrap-glyphicons.css">
 <link rel="stylesheet" href="css/basicPlaylist.css">
 
+<div allow-edit="style.background" class="template-wrapper" id="body">
+
 <div class="container">
 
-<!-- Header for All Modes -->
+    <!-- Header for All Modes -->
 
-    <div class="row">
+    <div class="row"  allow-edit="style.display" id="logo">
 
         <div class="col-xs-9 col-sm-6 col-md-8 col-lg-8">
 
@@ -21,7 +23,7 @@
 
             <form class="form-inline">
 
-                <p>Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
+                <p allow-edit="style.display" id="brand">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
 
                 <label>Zoom <zoom-control></zoom-control></label>
 
@@ -31,7 +33,7 @@
 
         <!-- Phone Menu Icon -->
 
-        <div class="col-xs-3 visible-xs menuHolder">
+        <div class="col-xs-3 col-sm-1 visible-xs visible-sm menuHolder">
 
             <button id="phoneMenuButton" type="button" class="btn btn-primary menuButton"></button>
 
@@ -39,39 +41,29 @@
 
         <!-- End Phone Menu Icon -->
 
-        <!-- Tablet Menu Icon -->
-
-        <div class="col-sm-1 visible-sm menuHolder">
-
-            <button id="tabletMenuButton" type="button" class="btn btn-primary menuButton"></button>
-
-        </div>
-
-        <!-- End Tablet Menu Icon -->
-
     </div>
 
     <!-- End Header -->
 
     <!-- Phone Playlist/Chapter Listing -->
 
-    <div class="row visible-xs">
+    <div id="phoneMenuDropdown" class="col-sm-12 hide">
 
-        <div id="phoneMenuDropdown" class="col-xs-12 menuDropdown hide pull-right">
+        <div class="menuDropdown">
 
-            <ul id="menuTabs" class="nav nav-tabs visible-xs">
+            <ul id="menuTabs" class="nav nav-tabs visible-xs visible-sm">
 
-                <li class="active"><a href="#videos" data-toggle="tab">Videos</a></li>
+                <li class="active"><a href="#tabletVideos" data-toggle="tab" id='Playlist-mobile' allow-edit='text'>Playlist</a></li>
 
-                <li><a href="#chapters" data-toggle="tab">Chapters</a></li>
+                <li><a href="#tabletChapters" data-toggle="tab" id='Chapters-mobile' allow-edit='text'>Chapters</a></li>
 
             </ul>
 
-            <div id="phoneMenuTabContent" class="tab-content visible-xs">
+            <div id="tabletMenuTabContent" class="tab-content visible-xs visible-sm">
 
-                <div class="tab-pane fade in active row" id="videos">
+                <div class="tab-pane fade in active row" id="tabletVideos">
 
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <playlist-navigator class="nav nav-list well"></playlist-navigator>
 
@@ -79,9 +71,9 @@
 
                 </div>
 
-                <div class="tab-pane fade row" id="chapters">
+                <div class="tab-pane fade row" id="tabletChapters">
 
-                    <div class="col-xs-12">
+                    <div class="col-sm-12">
 
                         <chapter-navigator class="nav nav-list well"></chapter-navigator>
 
@@ -97,207 +89,39 @@
 
     <!-- End Phone Playlist/Chapter Listing -->
 
+
     <!-- Combo Player -->
 
     <div class="row combo-player-row">
 
-        <div id="playerFrame" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left combo-player-wrapper">
+        <div id="comboPlayer" allow-edit='style.border-width' class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left combo-player-wrapper">
 
-            <div class="">
+            <div class="playerWrapper">
 
-                <div class="playerWrapper">
+                <div class="playerDiv">
 
-                    <div class="playerDiv">
-
-                        <combo-player></combo-player>
-
-                    </div>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
             </div>
 
         </div>
-
-        <!-- Tablet Playlist/Chapter Listing -->
-
-        <div id="tabletMenuDropdown" class="col-sm-4 hide pull-right">
-
-            <div class="menuDropdown">
-
-                <ul id="menuTabs" class="nav nav-tabs visible-sm">
-
-                    <li class="active"><a href="#tabletVideos" data-toggle="tab">Videos</a></li>
-
-                    <li><a href="#tabletChapters" data-toggle="tab">Chapters</a></li>
-
-                </ul>
-
-                <div id="tabletMenuTabContent" class="tab-content visible-sm">
-
-                    <div class="tab-pane fade in active row" id="tabletVideos">
-
-                        <div class="col-sm-12">
-
-                            <playlist-navigator class="nav nav-list well"></playlist-navigator>
-
-                        </div>
-
-                    </div>
-
-                    <div class="tab-pane fade row" id="tabletChapters">
-
-                        <div class="col-sm-12">
-
-                            <chapter-navigator class="nav nav-list well"></chapter-navigator>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Tablets: Bottom Columns -->
-
-        <div id="tabletColumns" class="col-sm-12 visible-sm pull-left">
-
-            <div class="row">
-
-                <div class="col-sm-12">
-
-                    <h2><presentation-title id="title_bar"></presentation-title></h2>
-
-                    <presentation-description/>
-
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-6">
-
-                    <h3>Attachments</h3>
-
-                    <attachments class="nav nav-list well"></attachments>
-
-                </div>
-
-                <div class="col-sm-6">
-
-                    <h3>Footnotes</h3>
-
-                    <footnotes class="nav nav-list well"></footnotes>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- End Tablets: Bottom Columns -->
 
     </div>
 
     <!-- End Combo Player -->
 
-    <!-- Phones: Presentation Title & Description -->
 
-    <div class="row visible-xs phone-presentation-title">
+    <!-- Presentation Title -->
 
-        <div class="accordion col-xs-12" id="presTitle">
+    <div class="row">
 
-            <div class="accordion-group">
+        <div class="col-sm-12">
 
-                <div class="accordion-heading">
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
 
-                    <a class="accordion-toggle" id="menuClick" data-toggle="collapse" data-parent="#presTitle" href="#collapseOne"><presentation-title id="title_bar"></presentation-title> <span class="accordToggle glyphicon glyphicon-chevron-down"></span></a>
-
-                </div>
-
-                <div id="collapseOne" class="accordion-body collapse">
-
-                    <div class="accordion-inner">
-
-                        <presentation-description/>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- End Phones: Presentation Title & Description -->
-
-    <!-- Phones: Attachment & Footnotes -->
-
-    <div class="row visible-xs">
-
-        <ul id="phoneTabs" class="nav nav-tabs">
-
-            <li class="active"><a href="#footnotes" data-toggle="tab">Footnotes</a></li>
-
-            <li><a href="#attachments" data-toggle="tab">Attachments</a></li>
-
-        </ul>
-
-        <div id="phoneTabContent" class="col-xs-12 tab-content">
-
-            <div class="tab-pane fade in active row" id="footnotes">
-
-                <div class="col-xs-12">
-
-                    <footnotes class="nav nav-list well"></footnotes>
-
-                </div>
-
-            </div>
-
-            <div class="tab-pane fade row" id="attachments">
-
-                <div class="col-xs-12">
-
-                    <attachments class="nav nav-list well"></attachments>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- End Phones: Attachment & Footnotes -->
-
-    <!-- Phones: Tag Line -->
-
-    <div class="row visible-xs tagLine">
-
-        <div class="col-xs-12">
-
-            <p>Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
-
-        </div>
-
-    </div>
-
-    <!-- End Phones: Tag Line -->
-
-    <!-- Desktop: Three Bottom Columns -->
-
-    <div class="row visible-md visible-lg">
-
-        <div class="col-md-12 col-lg-12">
-
-            <h2><presentation-title id="title_bar"></presentation-title></h2>
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
 
             <presentation-description/>
 
@@ -305,39 +129,20 @@
 
     </div>
 
-    <div class="row visible-md visible-lg">
+    <!-- End Presentation Title -->
 
-        <div class="col-md-12 col-lg-12">
 
-            <div class="row">
+    <!-- Social and brand -->
 
-                <div class="col-md-4 col-lg-4">
+    <div class="social-brand-wrapper row">
 
-                    <h3>Videos</h3>
+        <div class="col-xs-6 col-sm-8 col-md-9 col-lg-9">
 
-                    <playlist-navigator class="nav nav-list well"></playlist-navigator>
+            <div style="display: none;" id='social' allow-edit="style.display">
 
-                </div>
-
-                <div class="col-md-4 col-lg-4">
-
-                    <h3>Chapters</h3>
-
-                    <chapter-navigator class="nav nav-list well"></chapter-navigator>
-
-                </div>
-
-                <div class="col-md-4 col-lg-4">
-
-                    <h3>Footnotes</h3>
-
-                    <footnotes class="well footnotes"></footnotes>
-
-                    <h3>Attachments</h3>
-
-                    <attachments class="nav nav-list well"></attachments>
-
-                </div>
+                <a target="_blank" href="http://facebook.com/" id="facebook" allow-edit="href"><img src="img/fb.png" alt="facebook" /></a>
+                <a target="_blank" href="http://twitter.com/" id="twitter" allow-edit="href"><img src="img/tw.png" alt="twitter" /></a>
+                <a target="_blank" href="/rss" id="rss" allow-edit="href"><img src="img/rss.png" alt="rss" /></a>
 
             </div>
 
@@ -345,38 +150,72 @@
 
     </div>
 
+    <!-- End social and brand -->
+
+
+    <!-- Chapters, Footnotes, Playlist & Transcript-->
+    <div class="row">
+
+        <!-- Playlist -->
+
+        <div class="col-sm-4 hidden-xs hidden-sm">
+
+            <h3 id='Playlist' allow-edit='text' class="component-title">Playlist</h3>
+
+            <playlist-navigator class="nav nav-list well"></playlist-navigator>
+
+        </div>
+
+        <!-- Chapters -->
+
+        <div class="col-sm-4 hidden-xs hidden-sm">
+
+            <h3 id='Chapters' allow-edit='text' class="component-title">Chapters</h3>
+
+            <chapter-navigator class="nav nav-list well"></chapter-navigator>
+
+        </div>
+
+        <!-- Footnotes & Transcript -->
+
+        <div class="col-md-4">
+
+            <div>
+
+                <h3 id='Footnotes' allow-edit='text' class="component-title">Footnotes</h3>
+
+                <footnotes class="nav nav-list well"></footnotes>
+
+            </div>
+
+            <div>
+
+                <h3 id='Attachments' allow-edit='text' class="component-title">Attachments</h3>
+
+                <attachments class="nav nav-list well"></attachments>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Chapters, Attachments & Footnotes -->
+
+
+
 </div>
 
 <script src="js/bootstrap.min.js"></script>
 
+</div>
+
+
 <script>
     $(".menuButton").click(function() {
-        var whichButton = $(this).attr("id");
-        //console.log(whichButton)
-        if(whichButton == "phoneMenuButton") {
-            if($("#phoneMenuDropdown").hasClass("hide")) {
-                $("#phoneMenuDropdown").removeClass("hide").addClass("show");
-            } else {
-                $("#phoneMenuDropdown").removeClass("show").addClass("hide");
-            }
+        if($("#phoneMenuDropdown").hasClass("hide")) {
+            $("#phoneMenuDropdown").removeClass("hide").addClass("show");
         } else {
-            if($("#tabletMenuDropdown").hasClass("hide")) {
-                $("#playerFrame").removeClass("col-sm-12").addClass("col-sm-8");
-                $("#tabletColumns").removeClass("col-sm-12").addClass("col-sm-8");
-                $("#tabletMenuDropdown").removeClass("hide").addClass("show");
-            } else {
-                $("#playerFrame").removeClass("col-sm-8").addClass("col-sm-12");
-                $("#tabletColumns").removeClass("col-sm-8").addClass("col-sm-12");
-                $("#tabletMenuDropdown").removeClass("show").addClass("hide");
-            }
-        }
-    })
-
-    $(".accordion-toggle").click(function() {
-        if($(".accordToggle").hasClass("glyphicon-chevron-down")) {
-            $(".accordToggle").removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up")
-        } else {
-            $(".accordToggle").removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down")
+            $("#phoneMenuDropdown").removeClass("show").addClass("hide");
         }
     })
 </script>

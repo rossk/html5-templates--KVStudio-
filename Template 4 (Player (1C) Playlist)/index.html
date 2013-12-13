@@ -23,6 +23,8 @@
 
             <form class="form-inline">
 
+                <p allow-edit="style.display" id="brand">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
+
                 <label>Zoom <zoom-control></zoom-control></label>
 
             </form>
@@ -38,29 +40,47 @@
 
     <div class="row combo-player-row">
 
-        <!-- Navigator -->
-
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 navigator-wrapper">
-
-            <h3>Playlist</h3>
-
-            <playlist-navigator class="nav nav-list well"></playlist-navigator>
-
-        </div>
-
         <!-- Player -->
 
-        <div id="comboPlayer" allow-edit='style.border-width' class="col-xs-12 col-sm-12 col-md-12 col-lg-8 combo-player-wrapper">
+        <div id="comboPlayer" allow-edit='style.border-width' class="col-xs-12 col-sm-12 col-md-12 col-lg-8 combo-player-wrapper pull-right">
 
             <div class="playerWrapper">
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
             </div>
+
+        </div>
+
+        <!-- Presentation Title -->
+
+        <div class="row hidden-lg">
+
+            <div class="col-sm-12">
+
+                <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+                <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+                <presentation-description/>
+
+            </div>
+
+        </div>
+
+        <!-- End Presentation Title -->
+
+        <!-- Navigator -->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 navigator-wrapper pull-left">
+
+            <h3 id='playlist' allow-edit='text' class="component-title">Playlist</h3>
+
+            <playlist-navigator class="nav nav-list well"></playlist-navigator>
 
         </div>
 
@@ -69,15 +89,23 @@
     <!-- End Combo Player -->
 
 
-    <!-- Presentation Subtitle -->
+    <!-- Presentation Title -->
 
-    <div class="row subtitle-wrapper">
+    <div class="row visible-lg">
 
-        <h4 allow-edit='text' id="subtitle"></h4>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 pull-right">
+
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+            <presentation-description/>
+
+        </div>
 
     </div>
 
-    <!-- End Presentation Subtitle -->
+    <!-- End Presentation Title -->
 
 
     <!-- Social and brand -->
@@ -95,8 +123,6 @@
             </div>
 
         </div>
-
-        <p allow-edit="style.display" id="brand" class="brand col-xs-6 col-sm-4 col-md-3 col-lg-3 tabs-right">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
 
     </div>
 

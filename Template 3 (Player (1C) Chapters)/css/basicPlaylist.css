@@ -100,7 +100,7 @@ form label input[type="range"] {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .social-brand-wrapper {
         margin: 0;
@@ -119,6 +119,10 @@ form label input[type="range"] {
         overflow: hidden;
     }
 
+    h3.component-title {
+        font-size: 18px;
+    }
+
 }
 
 
@@ -135,3 +139,4 @@ form label input[type="range"] {
     }
 
 }
+

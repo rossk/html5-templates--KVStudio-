@@ -31,9 +31,64 @@
 
         </div>
 
+        <!-- Phone Menu Icon -->
+
+        <div class="col-xs-3 col-sm-1 visible-xs visible-sm menuHolder">
+
+            <button id="phoneMenuButton" type="button" class="btn btn-primary menuButton"></button>
+
+        </div>
+
+        <!-- End Phone Menu Icon -->
+
     </div>
 
     <!-- End Header -->
+
+
+    <!-- Phone Playlist/Chapter Listing -->
+
+    <div id="phoneMenuDropdown" class="col-sm-12 hide">
+
+        <div class="menuDropdown">
+
+            <ul id="menuTabs" class="nav nav-tabs visible-xs visible-sm">
+
+                <li class="active"><a href="#tabletVideos" data-toggle="tab" id='Transcript-mobile' allow-edit='text'>Transcript</a></li>
+
+                <li><a href="#tabletChapters" data-toggle="tab" id='Chapters-mobile' allow-edit='text'>Chapters</a></li>
+
+            </ul>
+
+            <div id="tabletMenuTabContent" class="tab-content visible-xs visible-sm">
+
+                <div class="tab-pane fade in active row" id="tabletVideos">
+
+                    <div class="col-sm-12">
+
+                        <transcript class="nav nav-list well"></transcript>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade row" id="tabletChapters">
+
+                    <div class="col-sm-12">
+
+                        <chapter-navigator class="nav nav-list well"></chapter-navigator>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End Phone Playlist/Chapter Listing -->
 
 
     <!-- Combo Player -->
@@ -46,7 +101,7 @@
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
@@ -59,15 +114,23 @@
     <!-- End Combo Player -->
 
 
-    <!-- Presentation Subtitle -->
+    <!-- Presentation Title -->
 
-    <div class="row subtitle-wrapper">
+    <div class="row">
 
-        <h4 allow-edit='text' id="subtitle"></h4>
+        <div class="col-sm-12">
+
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+            <presentation-description/>
+
+        </div>
 
     </div>
 
-    <!-- End Presentation Subtitle -->
+    <!-- End Presentation Title -->
 
 
     <!-- Social and brand -->
@@ -96,46 +159,43 @@
 
         <!-- Chapters -->
 
-        <div class="col-sm-4">
+        <div class="col-md-4 hidden-xs hidden-sm">
 
-            <h3>Chapters</h3>
+            <h3 id='Chapters' allow-edit='text' class="component-title">Chapters</h3>
 
             <chapter-navigator class="nav nav-list well"></chapter-navigator>
 
         </div>
 
-        <!-- Footnotes -->
+        <!-- Footnotes & Attachments -->
 
-        <div class="col-sm-4">
-
-            <h3>Footnotes</h3>
-
-            <footnotes class="nav nav-list well"></footnotes>
-
-        </div>
-
-        <!-- Attachments & Transcript -->
-
-        <div class="col-sm-4">
+        <div class="col-md-4">
 
             <div>
 
-                <h3>Attachments</h3>
+                <h3 id='Footnotes' allow-edit='text' class="component-title">Footnotes</h3>
+
+                <footnotes class="nav nav-list well"></footnotes>
+
+            </div>
+
+            <div>
+
+                <h3 id='Attachments' allow-edit='text' class="component-title">Attachments</h3>
 
                 <attachments class="nav nav-list well"></attachments>
 
             </div>
 
+        </div>
 
-            <div>
+        <!-- Transcript -->
 
-                <h3 class="pull-left">Transcript</h3>
+        <div class="col-md-4 hidden-xs hidden-sm">
 
-                <transcript-search class="pull-right"></transcript-search>
+            <h3 id='Transcript' allow-edit='text' class="component-title">Transcript</h3>
 
-                <transcript class="nav nav-list well"></transcript>
-
-            </div>
+            <transcript class="nav nav-list well"></transcript>
 
         </div>
 
@@ -149,3 +209,13 @@
 <script src="js/bootstrap.min.js"></script>
 
 </div>
+
+<script>
+    $(".menuButton").click(function() {
+        if($("#phoneMenuDropdown").hasClass("hide")) {
+            $("#phoneMenuDropdown").removeClass("hide").addClass("show");
+        } else {
+            $("#phoneMenuDropdown").removeClass("show").addClass("hide");
+        }
+    })
+</script>

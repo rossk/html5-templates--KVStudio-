@@ -119,6 +119,11 @@ form label input[type="range"] {
         overflow: hidden;
     }
 
+    h3.component-title {
+        font-size: 18px;
+    }
+
+
 }
 
 
@@ -134,4 +139,25 @@ form label input[type="range"] {
         width: 480px;
     }
 
+}
+
+/* Phone menus */
+
+#tabletMenuDropdown {
+    margin-top: 9px;
+    padding-right: 0;
+}
+
+.menuHolder {
+    text-align: right;
+}
+
+.menuButton {
+    text-decoration: none;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    background-image: url('../img/navicon.png');
+    background-repeat: no-repeat;
+    background-position: center center;
 }

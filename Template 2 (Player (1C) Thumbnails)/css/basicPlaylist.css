@@ -91,17 +91,27 @@ form label input[type="range"] {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .social-brand-wrapper {
         margin: 0;
         overflow: hidden;
     }
 
+    .subtitle-wrapper,
+    .navigator-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .combo-player-row {
         margin-right: 0;
         margin-left: 0;
         overflow: hidden;
+    }
+
+    h3.component-title {
+        font-size: 18px;
     }
 
 }

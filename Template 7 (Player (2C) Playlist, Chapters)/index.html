@@ -19,7 +19,7 @@
 
         </div>
 
-        <div id="zoom" class="col-sm-5 col-md-4 col-lg-4 hidden-xs">
+        <div id="zoom" class="col-sm-6 col-md-4 col-lg-4 hidden-xs">
 
             <form class="form-inline">
 
@@ -31,9 +31,64 @@
 
         </div>
 
+        <!-- Phone Menu Icon -->
+
+        <div class="col-xs-3 visible-xs menuHolder">
+
+            <button id="phoneMenuButton" type="button" class="btn btn-primary menuButton"></button>
+
+        </div>
+
+        <!-- End Phone Menu Icon -->
+
     </div>
 
     <!-- End Header -->
+
+
+    <!-- Phone Playlist/Chapter Listing -->
+
+    <div id="phoneMenuDropdown" class="col-sm-12 hide">
+
+        <div class="menuDropdown">
+
+            <ul id="menuTabs" class="nav nav-tabs visible-xs">
+
+                <li class="active"><a href="#tabletVideos" data-toggle="tab" id='Playlist-mobile' allow-edit='text'>Playlist</a></li>
+
+                <li><a href="#tabletChapters" data-toggle="tab" id='Chapters-mobile' allow-edit='text'>Chapters</a></li>
+
+            </ul>
+
+            <div id="tabletMenuTabContent" class="tab-content visible-xs">
+
+                <div class="tab-pane fade in active row" id="tabletVideos">
+
+                    <div class="col-sm-12">
+
+                        <playlist-navigator class="nav nav-list well"></playlist-navigator>
+
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade row" id="tabletChapters">
+
+                    <div class="col-sm-12">
+
+                        <chapter-navigator class="nav nav-list well"></chapter-navigator>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End Phone Playlist/Chapter Listing -->
 
 
     <!-- Combo Player -->
@@ -46,7 +101,7 @@
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
@@ -59,15 +114,23 @@
     <!-- End Combo Player -->
 
 
-    <!-- Presentation Subtitle -->
+    <!-- Presentation Title -->
 
-    <div class="row subtitle-wrapper">
+    <div class="row">
 
-        <h4 allow-edit='text' id="subtitle"></h4>
+        <div class="col-sm-12">
+
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+            <presentation-description/>
+
+        </div>
 
     </div>
 
-    <!-- End Presentation Subtitle -->
+    <!-- End Presentation Title -->
 
 
     <!-- Social and brand -->
@@ -92,13 +155,13 @@
 
 
     <!-- Chapters and Footnotes -->
-    <div class="row playlist-wrapper">
+    <div class="row playlist-wrapper hidden-xs">
 
         <!-- Playlist -->
 
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-6">
 
-            <h3>Playlist</h3>
+            <h3 id='Playlist' allow-edit='text' class="component-title">Playlist</h3>
                      
             <playlist-navigator class="nav nav-list well"></playlist-navigator>
 
@@ -106,9 +169,9 @@
 
         <!-- Chapters -->
 
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-6">
 
-            <h3>Chapters</h3>
+            <h3 id='Chapters' allow-edit='text' class="component-title">Chapters</h3>
 
             <chapter-navigator class="nav nav-list well"></chapter-navigator>
 
@@ -123,4 +186,13 @@
 
 <script src="js/bootstrap.min.js"></script>
 
-</div>
+
+<script>
+    $(".menuButton").click(function() {
+        if($("#phoneMenuDropdown").hasClass("hide")) {
+            $("#phoneMenuDropdown").removeClass("hide").addClass("show");
+        } else {
+            $("#phoneMenuDropdown").removeClass("show").addClass("hide");
+        }
+    })
+</script>

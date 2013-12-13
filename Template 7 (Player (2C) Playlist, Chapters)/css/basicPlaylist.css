@@ -118,6 +118,11 @@ form label input[type="range"] {
         overflow: hidden;
     }
 
+    h3.component-title {
+        font-size: 18px;
+    }
+
+
 }
 
 
@@ -133,4 +138,55 @@ form label input[type="range"] {
         width: 480px;
     }
 
+}
+
+
+/* Phone menus */
+
+#tabletMenuDropdown {
+    margin-top: 9px;
+    padding-right: 0;
+}
+
+.menuHolder {
+    text-align: right;
+}
+
+.menuButton {
+    text-decoration: none;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    background-image: url('../img/navicon.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.nav-tabs > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs {
+    text-align:center;
+}
+
+#phoneTabs, #menuTabs {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tab-pane {
+    padding-top: 10px;
+}
+
+.tagLine {
+    margin-top: 10px;
+    background: #eee;
+}
+
+.tagLine p {
+    text-align: center;
 }

@@ -23,6 +23,8 @@
 
             <form class="form-inline">
 
+                <p allow-edit="style.display" id="brand">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
+
                 <label>Zoom <zoom-control></zoom-control></label>
 
             </form>
@@ -44,7 +46,7 @@
 
                 <div class="playerDiv">
 
-                    <combo-player></combo-player>
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
 
                 </div>
 
@@ -57,15 +59,23 @@
     <!-- End Combo Player -->
 
 
-    <!-- Presentation Subtitle -->
+    <!-- Presentation Title -->
 
-    <div class="row subtitle-wrapper">
+    <div class="row">
 
-        <h4 allow-edit='text' id="subtitle"></h4>
+        <div class="col-sm-12">
+
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+            <presentation-description/>
+
+        </div>
 
     </div>
 
-    <!-- End Presentation Subtitle -->
+    <!-- End Presentation Title -->
 
 
     <!-- Social and brand -->
@@ -84,24 +94,26 @@
 
         </div>
 
-        <p allow-edit="style.display" id="brand" class="brand col-xs-6 col-sm-4 col-md-3 col-lg-3 tabs-right">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
-
     </div>
 
     <!-- End social and brand -->
 
 
-    <!-- Thumbnails -->
+    <!-- Chapters -->
 
     <div class="row navigator-wrapper">
 
-        <h3>Chapters</h3>
+        <div class="col-sm-12">
 
-        <chapter-navigator class="nav nav-list well"></chapter-navigator>
+            <h3 id='Chapters' allow-edit='text' class="component-title">Chapters</h3>
+
+            <chapter-navigator class="nav nav-list well"></chapter-navigator>
+
+        </div>
 
     </div>
 
-    <!-- Thumbnails -->
+    <!-- End Chapters -->
 
 
 
