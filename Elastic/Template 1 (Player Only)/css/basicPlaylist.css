@@ -1,0 +1,122 @@
+/* Iframe styles */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+}
+
+html.kvapp,
+html.kvapp body,
+html.kvapp body > div,
+html.kvapp body > div > div,
+html.kvapp .template-wrapper {
+    height: auto;
+    min-height: 100%;
+}
+
+#playerFrame {
+    border: 0px solid #333;
+}
+
+.social-wrapper {
+    display: none;
+}
+
+.container {
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.btn-link, .btn-link:hover, btn-link:focus, .btn-link:active {
+    color: #000;
+    text-decoration: none;
+}
+
+.combo-player-wrapper {
+    border: 1px solid #e3e3e3;
+    background: #555;
+    border-radius: 0;
+    box-shadow: 0 0 60px 20px rgba(0,0,0,0.5) inset;
+    margin: 10px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.playerWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.playerDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.social-brand-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.social-brand-wrapper>* {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.brand {
+    text-align: right;
+}
+
+#zoom {
+    text-align: right;
+    padding-top: 10px;
+}
+
+form p {
+    margin-bottom: 0;
+}
+
+form label input[type="range"] {
+    vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+
+    .social-brand-wrapper {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .combo-player-row {
+        margin-right: 0;
+        margin-left: 0;
+        overflow: hidden;
+    }
+
+}
+
+
+/* iPhone */
+@media only screen and (width:320px) and (device-width:320px) and (device-height:480px) and (orientation: landscape) {
+
+    body {
+        -webkit-transform: scale(0.667);
+        -webkit-transform-origin: top right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 480px;
+    }
+
+}

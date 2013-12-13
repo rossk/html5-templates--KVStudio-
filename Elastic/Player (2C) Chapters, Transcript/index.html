@@ -1,0 +1,134 @@
+
+
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-glyphicons.css">
+<link rel="stylesheet" href="css/basicPlaylist.css">
+
+<div id="template" allow-edit="style.background" class="template-wrapper">
+
+<div class="container">
+
+    <!-- Header for All Modes -->
+
+    <div class="row"  allow-edit="style.display" id="logo">
+
+        <div class="col-xs-7 col-sm-8 col-md-8 col-lg-8">
+
+            <a href="http://www.knowledgevision.com" target="_blank" id="logoLink" allow-edit="href"><img src="img/kv-logo.png" class="img-responsive" id="logoImage" allow-edit="src" /></a>
+
+        </div>
+
+        <div id="zoom" class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+
+            <form class="form-inline">
+
+                <p allow-edit="style.display" id="brand">Powered by <a href="http://www.knowledgevision.com" target="_blank">KnowledgeVision</a></p>
+
+                <label>Zoom <zoom-control></zoom-control></label>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- End Header -->
+
+
+    <!-- Combo Player -->
+
+    <div class="row combo-player-row">
+
+        <div id="comboPlayer" allow-edit='style.border-width' class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pull-left combo-player-wrapper">
+
+            <div class="playerWrapper">
+
+                <div class="playerDiv">
+
+                    <combo-player id="player" playerChrome="combo" allow-edit="playerChrome"></combo-player>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End Combo Player -->
+
+    <!-- Presentation Title -->
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            <h2 class="hidden-sm hidden-xs"><presentation-title allow-edit='text' id="subtitle"></presentation-title></h2>
+
+            <h4 class="visible-sm visible-xs"><presentation-title></presentation-title></h4>
+
+            <presentation-description/>
+
+        </div>
+
+    </div>
+
+    <!-- End Presentation Title -->
+
+
+    <!-- Social -->
+
+    <div class="social-brand-wrapper row">
+
+        <div class="col-xs-12">
+
+            <div style="display: none;" id='social' allow-edit="style.display">
+
+                <a target="_blank" href="http://facebook.com/" id="facebook" allow-edit="href"><img src="img/fb.png" alt="facebook" /></a>
+                <a target="_blank" href="http://twitter.com/" id="twitter" allow-edit="href"><img src="img/tw.png" alt="twitter" /></a>
+                <a target="_blank" href="/rss" id="rss" allow-edit="href"><img src="img/rss.png" alt="rss" /></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End social -->
+
+
+    <!-- Chapters and Footnotes -->
+    <div class="row attachment-wrapper">
+
+        <!-- Chapters -->
+
+        <div class="col-xs-6">
+
+            <h3 id='Chapters' allow-edit='text' class="component-title">Chapters</h3>
+
+            <chapter-navigator class="nav nav-list well"></chapter-navigator>
+
+        </div>
+
+
+        <!-- Transcript -->
+
+        <div class="col-xs-6">
+
+            <h3 id='Transcript' allow-edit='text' class="component-title">Transcript</h3>
+
+            <transcript class="nav nav-list well"></transcript>
+
+        </div>
+
+    </div>
+    <!-- End Thumbnails and Attachments -->
+
+
+
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+
+</div>
