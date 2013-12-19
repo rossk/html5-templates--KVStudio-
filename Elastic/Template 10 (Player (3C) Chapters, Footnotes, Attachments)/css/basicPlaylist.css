@@ -95,6 +95,27 @@ form label input[type="range"] {
     vertical-align: middle;
 }
 
+div.footnotes { 
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div.footnotes > a { 
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+
+@media (max-width: 991px) { 
+     h2 div.presentation-title {
+	    font-size: 18px;
+    }
+	div#zoom label {
+	    font-size: 12px;
+	}
+	.well {
+	    padding: 15px;
+	}
+}
 @media (max-width: 767px) {
 
     .social-brand-wrapper {
@@ -102,7 +123,8 @@ form label input[type="range"] {
         overflow: hidden;
     }
 
-    .subtitle-wrapper{
+    .subtitle-wrapper,
+    .attachment-wrapper {
         margin-left: 0;
         margin-right: 0;
     }
@@ -117,8 +139,40 @@ form label input[type="range"] {
         font-size: 18px;
     }
 
-
+    ul.chapter-navigator > li > a {
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word; 
+	 
+   }
+   
+   ul.playlist-navigator > li > a { 
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div.footnotes { 
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div.footnotes > a { 
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div#zoom label {
+	    font-size: 10px;
+	}
+	
+	.well {
+	    padding: 10px;
+	}
 }
+
 
 
 /* iPhone */

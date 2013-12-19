@@ -119,7 +119,15 @@ form label input[type="range"] {
 
 
 }
-
+div.footnotes { 
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div.footnotes > a { 
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
 
 /* iPhone */
 @media only screen and (width:320px) and (device-width:320px) and (device-height:480px) and (orientation: landscape) {

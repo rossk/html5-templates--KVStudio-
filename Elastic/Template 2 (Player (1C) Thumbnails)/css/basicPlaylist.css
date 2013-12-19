@@ -91,7 +91,33 @@ form label input[type="range"] {
 }
 
 
-@media (max-width: 768px) {
+div.footnotes { 
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div.footnotes > a { 
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+
+@media (max-width: 991px) { 
+     h2 div.presentation-title {
+	    font-size: 18px;
+    }
+	div#zoom label {
+	    font-size: 12px;
+	}
+	.well {
+	    padding: 15px;
+	}
+	
+	div.thumbnail-navigator img { 
+	    width: 150px;
+		height: 125px;
+	}
+}
+@media (max-width: 767px) {
 
     .social-brand-wrapper {
         margin: 0;
@@ -99,7 +125,7 @@ form label input[type="range"] {
     }
 
     .subtitle-wrapper,
-    .navigator-wrapper {
+    .attachment-wrapper {
         margin-left: 0;
         margin-right: 0;
     }
@@ -114,7 +140,45 @@ form label input[type="range"] {
         font-size: 18px;
     }
 
+    ul.chapter-navigator > li > a {
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word; 
+	 
+   }
+   
+   ul.playlist-navigator > li > a { 
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div.footnotes { 
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div.footnotes > a { 
+		font-size: 11px;
+		white-space: pre-line;
+		word-wrap: break-word;
+   }
+   
+   div#zoom label {
+	    font-size: 10px;
+	}
+	
+	.well {
+	    padding: 10px;
+	}
+	
+	div.thumbnail-navigator img { 
+	    width: 120px;
+		height: 100px;
+	}
 }
+
 
 
 /* iPhone */
